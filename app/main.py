@@ -15,6 +15,14 @@ router = APIRouter(
     prefix="/restaurants", tags=["Restaurantes"])
 
 
+@router.get("/statistics", response_model=schemas.Statistics,
+            description="Muestra los restaurantes en un radio en metros específico tomando como centro de referencia una latitud y una longitud determinadas")
+def statistics(latitude: float, longitude: float,
+               radius: float, db: Session = Depends(get_db)):
+
+    return db.query(func.count(models.Post.id).label('count'), func.avg(models.Post.rating).label('avg'), func.stddev(models.Post.rating).label('std')).filter(func.ST_DistanceSphere(func.ST_MakePoint(models.Post.lng, models.Post.lat), func.ST_MakePoint(longitude, latitude)) <= radius).first()
+
+
 # Get all the restaurants
 
 
