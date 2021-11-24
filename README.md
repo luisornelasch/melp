@@ -13,7 +13,7 @@
 
 NOTA: Para poder correr la API de forma local es necesario contar con Docker.
 
-Los siguientes comandos nos permitirán levantar los contenedores de docker para correr la API:
+El siguiente comando nos permitirá levantar los contenedores de Docker para correr la API:
 
 ```sh
 $ docker-compose up -d
@@ -28,6 +28,7 @@ $ docker-compose logs -f app
 Estos comandos van a levantar la API de forma local en [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 De forma local podemos consultar la documentación de ReDoc de la API en la ruta: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc).
+
 Para pobrar la funcionalidad de la API en la ruta: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 
 
