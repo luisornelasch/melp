@@ -1,6 +1,5 @@
 from os import name
 from typing import Optional
-import pandas
 from pydantic import BaseModel, Field, validator
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, Float, engine
 from sqlalchemy import orm
@@ -8,6 +7,7 @@ from sqlalchemy.orm import relationship, session
 from sqlalchemy.sql.expression import null, text
 from sqlalchemy.sql.functions import count
 from sqlalchemy.sql.sqltypes import TIMESTAMP
+#from app.database import Base, engine
 from app.database.database import Base, engine
 from numpy import genfromtxt
 
@@ -27,8 +27,3 @@ class Post(Base):
     lat = Column(Float)
     lng = Column(Float)
 
-
-# file_name = "restaurantes.csv"
-# data_frame = pandas.read_csv(file_name)
-# data_frame.to_sql(con=engine, name=Post.__tablename__,
-#                   if_exists='append', index=False)

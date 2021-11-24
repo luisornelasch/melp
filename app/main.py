@@ -24,8 +24,6 @@ def statistics(latitude: float, longitude: float,
 
 
 # Get all the restaurants
-
-
 @router.get("", response_model=List[schemas.Restaurant],
             description="Muestra todos los restaurantes registrados")
 def list_restaurants(db: Session = Depends(get_db)):
