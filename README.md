@@ -1,8 +1,8 @@
 # Melp - Intelimétrica
 
- Prueba para Backend Developer en Intelimétrica
+ Test for Backend Developer at Intelimétrica
 
- Los enlaces a la documentación de la API:
+ Links to the API documentation:
 
 - Swagger UI: [https://melp-testing.herokuapp.com/docs](https://melp-testing.herokuapp.com/docs)
 - ReDoc Documentation: [https://melp-testing.herokuapp.com/redoc](https://melp-testing.herokuapp.com/redoc)
@@ -11,30 +11,30 @@
 
 ## Local
 
-NOTA: Para poder correr la API de forma local es necesario contar con Docker.
+NOTE: To be able to run the API locally, you need to have Docker installed.
 
-El siguiente comando nos permitirá levantar los contenedores de Docker para correr la API:
+The following command will allow us to raise the Docker containers to run the API:
 
 ```sh
 $ docker-compose up -d
 ```
 
-Para correr la API se usa el comando:
+To run the API, the command used is:
 
 ```sh
 $ docker-compose logs -f app
 ```
 
-Estos comandos van a levantar la API de forma local en [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+These commands will raise the API locally at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-De forma local podemos consultar la documentación de ReDoc de la API en la ruta: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc).
+Locally we can consult the ReDoc documentation of the API in the path: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc).
 
-Para pobrar la funcionalidad de la API en la ruta: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
+To test the functionality of the API in the path: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 
 
-### Migración
+### Migration
 
-Para la migración a la base de datos únicamente es necesario ejecutar el comando:
+For migration to the database, it is only necessary to run the command:
 
 ```sh
 $ docker-compose exec app python migration.py
